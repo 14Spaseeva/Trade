@@ -21,7 +21,7 @@ public class TradesWindowCalc {
             TradesWindowCalc t = new TradesWindowCalc();
             t.findMaxTrades(scanner);
             scanner.close();
-            MAX_AMOUNT.forEach((key, value) -> System.out.println(key + " " + value));
+            MAX_AMOUNT.forEach((key, value) -> System.out.println(value));
         } catch (FileNotFoundException | ParseException e) {
             System.err.println(e.getMessage());
         }
