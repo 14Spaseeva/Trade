@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TradesWindowCalc {
 
-    private final static Map<String, Integer> MAX_AMOUNT       = new HashMap<>();
+    private final static Map<String, Integer> MAX_AMOUNT       = new TreeMap<>();
     private final static Deque<Trade>         TIME_STAMP_QUEUE = new ArrayDeque<>();
     private final static Map<String, Integer> CURRENT_AMOUNT   = new HashMap<>();
     private final static DateFormat           FORMAT           = new SimpleDateFormat("HH:mm:ss.SSS", Locale.ENGLISH);
@@ -105,6 +105,5 @@ public class TradesWindowCalc {
         long k = TimeUnit.MILLISECONDS.toMillis(d2.getTime().getTime() - d1.getTime().getTime());
         return k < 60000;
     }
-
 
 }
